@@ -2,15 +2,12 @@
 
 [ext_resource type="PackedScene" uid="uid://bhstyum6mh24l" path="res://levels/base_level.tscn" id="1_x25rp"]
 [ext_resource type="PackedScene" uid="uid://bvtohc08dllsq" path="res://enemies/enemy_boar.tscn" id="2_gmgay"]
-[ext_resource type="Script" uid="uid://dhfs8u6naxtrf" path="res://assets/scripts/test_level.gd" id="2_o6mel"]
 [ext_resource type="Texture2D" uid="uid://b7qs323w2x4rj" path="res://assets/background/background.png" id="2_w7r7j"]
 [ext_resource type="Texture2D" uid="uid://cw8isgemvkxlh" path="res://assets/background/foreground.png" id="3_w7r7j"]
 [ext_resource type="Texture2D" uid="uid://b73id8w2yxaxh" path="res://assets/background/midground.png" id="5_e7anx"]
 [ext_resource type="Texture2D" uid="uid://coescof0j77g0" path="res://assets/background/farground.png" id="6_ur00s"]
 
-[node name="TestLevel" unique_id=71546732 node_paths=PackedStringArray("foreground_parallax") instance=ExtResource("1_x25rp")]
-script = ExtResource("2_o6mel")
-foreground_parallax = NodePath("Parallax/ForegroundParallax")
+[node name="TestLevel" unique_id=71546732 instance=ExtResource("1_x25rp")]
 
 [node name="Parallax" type="Node2D" parent="." index="0" unique_id=907547021]
 
@@ -29,6 +26,7 @@ scroll_scale = Vector2(0.7, 1)
 repeat_size = Vector2(592, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="Parallax/ForegroundParallax" index="0" unique_id=1119017001]
+position = Vector2(0, -337)
 texture = ExtResource("3_w7r7j")
 centered = false
 
